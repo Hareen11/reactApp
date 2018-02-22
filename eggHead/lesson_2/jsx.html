@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Hello props</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script type="text/babel">
+    const rootElement = document.getElementById('root');
+    // REACT 
+    // const element = React.createElement(
+    //     'div',
+    //     {
+    //         className: 'container',
+    //         children: ['Hello Word']
+    //     },
+    // )
+    //const element = <div className ="container">Hello Word </div>
+    const content = 'Hello Word' 
+    
+    const props = {
+        className: 'container',
+        children: content,
+    } 
+    // const element = <div className ="container"><h1> {content} </h1></div>
+    //const element = <div {...props} />
+    
+    // For overRiding Class
+    //const element = <div {...props} className ='hareen'/>
+
+    // For overRiding Class
+    const element = <div {...props}> Hello React </div>
+    //console.log(element);
+    ReactDOM.render(element, rootElement);
+</script>
+
+</html>
